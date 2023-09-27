@@ -1,0 +1,622 @@
+/* CSS Reset untuk menghilangkan margin dan padding default */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Atur font default dan warna latar belakang */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #f1f5f8; /* Warna latar belakang yang sesuai dari Color Hunt */
+}
+
+/* Header styling */
+header {
+    background-color: #485460; /* Warna header yang sesuai dari Color Hunt */
+    color: #fff; /* Warna teks header yang sesuai dari Color Hunt */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 80px;
+    opacity: 0; /* Mulai dengan opasitas nol */
+    animation: fadeIn 2s ease-in-out forwards; /* Animasi fade in selama 2 detik */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Akhiri dengan opasitas penuh */
+    }
+}
+
+/* Logo styling */
+.logo {
+    font-size: 36px;
+    transition: transform 0.2s;
+}
+
+/* Efek Hover untuk logo */
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* Navigasi styling (horizontal) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin-right: 20px; /* Tambahkan margin-right */
+}
+
+.nav-list li {
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff; /* Warna teks navigasi yang sesuai dari Color Hunt */
+    font-weight: bold;
+}
+
+/* Efek Hover untuk tautan navigasi */
+.nav-list li a:hover {
+    color: #ffa07a; /* Warna hover tautan navigasi yang sesuai dari Color Hunt */
+}
+
+/* Hamburger menu styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 101;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff; /* Warna ikon hamburger yang sesuai dari Color Hunt */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Efek Hover untuk hamburger menu */
+.menu-toggle:hover .bar {
+    background-color: #ffa07a; /* Warna hover ikon hamburger yang sesuai dari Color Hunt */
+}
+
+/* Tampilkan menu pada layar kecil */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #485460; /* Warna latar belakang menu yang sesuai dari Color Hunt */
+        width: 100%;
+        padding: 10px 0;
+        z-index: 100;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    /* Animasi tampilan menu */
+    .nav-list.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Efek Hover untuk tautan navigasi di layar kecil */
+    .nav-list.active li a:hover {
+        color: #ffa07a; /* Warna hover tautan navigasi yang sesuai dari Color Hunt */
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Main Content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f1f5f8; /* Warna latar belakang yang sesuai dari Color Hunt */
+    background-image: url('image/bg.png'); /* Ganti dengan path gambar Anda */
+    background-repeat: repeat; /* Mengulang gambar latar belakang */
+    padding: 10px; /* Tambahkan padding */
+}
+
+.content {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Kolom Pertama */
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Aside styling */
+aside {
+    width: 90%;
+}
+
+.image-container {
+    padding-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+}
+
+#image {
+    max-width: 120%;
+    width: 150%;
+    height: auto;
+    transition: filter 0.5s ease;
+}
+
+/* Tombol styling */
+.btn {
+    display: inline-block;
+    background-color: #2980b9; /* Warna latar belakang tombol yang sesuai dari Color Hunt */
+    color: #fff; /* Warna teks tombol yang sesuai dari Color Hunt */
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Efek Hover untuk tombol */
+.btn:hover {
+    background-color: #485460; /* Warna hover latar belakang tombol yang sesuai dari Color Hunt */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Tautan menu aktif */
+.nav-list li a.active {
+    color: #ffa07a; /* Warna tautan menu aktif yang sesuai dari Color Hunt */
+}
+
+/* Tampilan responsif pada layar dengan lebar maksimum 768px */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+        align-items: center; /* Pusatkan konten */
+    }
+
+    .content {
+        flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+        align-items: center; /* Pusatkan konten */
+    }
+
+    .column {
+        margin-right: 0; /* Hapus margin kanan */
+    }
+
+    aside {
+        width: 100%; /* Lebar penuh pada layar kecil */
+    }
+
+    .image-container {
+        padding-bottom: 10px; /* Kurangi padding bawah */
+    }
+}
+
+/* Tampilan responsif pada layar dengan lebar maksimum 480px */
+@media screen and (max-width: 480px) {
+    .btn {
+        font-size: 14px; /* Kurangi ukuran teks tombol */
+    }
+}
+
+/* Portfolio styling */
+#portfolio {
+    background-color: #f1f5f8; /* Warna latar belakang yang sesuai dari Color Hunt */
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Jarak antara elemen */
+    justify-items: center; /* Pusatkan elemen-elemen secara horizontal */
+    align-items: center; /* Pusatkan elemen-elemen secara vertikal */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.portfolio-item {
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Efek Hover untuk item portofolio */
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-item h3 {
+    margin-top: 10px;
+}
+
+/* About Me styling */
+/* CSS untuk bagian "Tentang Saya" */
+
+#about {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#about, #portfolio h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsif pada layar yang lebih kecil */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 10px; /* Mengurangi padding untuk layar yang lebih kecil */
+    }
+
+    #about h2 {
+        font-size: 1.5rem; /* Ukuran font yang lebih kecil untuk layar yang lebih kecil */
+    }
+
+    #about p {
+        font-size: 1rem; /* Ukuran font yang lebih kecil untuk layar yang lebih kecil */
+    }
+}
+
+/* Styling untuk bagian Kontak */
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Menjaga jarak antara elemen */
+    align-items: center;
+    max-width: 1200px; /* Maksimum lebar kontainer */
+    margin: 0 auto; /* Pusatkan kontainer */
+    padding: 0 20px; /* Tambahkan padding di sisi */
+}
+
+.contact-left,
+.contact-right {
+    flex: 1;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+    background-color: #fff; /* Warna latar belakang untuk kontainer kanan */
+    border-radius: 5px; /* Sudut border */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    background-color: #485460;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #007acc;
+}
+
+/* Responsif */
+/* Responsif */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-left{
+        flex: 1;
+        padding-right: 50px;
+        margin: 20px 0; /* Mengatur margin atas dan bawah untuk layar kecil */
+    }
+    .contact-right {
+        flex: 1;
+        padding: 20px;
+        margin: 20px 0; /* Mengatur margin atas dan bawah untuk layar kecil */
+    }
+
+    iframe {
+        max-width: 100%;
+        height: 100;
+    }
+
+    .contact-right {
+        order: 2; /* Mengubah urutan elemen peta menjadi 2 saat layar kecil */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* SVG Waves styling */
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /* Fix for safari gap */
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+.gelombang {
+    position: absolute;
+    width: 100%;
+    top: 64%;
+}
+
+/* Untuk layar yang lebih kecil dari 768px */
+@media (max-width: 768px) {
+    /* Sembunyikan foto "hero2" */
+    .image-container {
+        display: none;
+    }
+
+    /* Sembunyikan gelombang */
+    .gelombang {
+        display: none;
+    }
+
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    /* Hentikan animasi gelombang di layar kecil */
+    .parallax>use {
+        animation: none;
+    }
+}
+
+/* Tambahan CSS untuk keterampilan */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills {
+    background-color: aliceblue;
+}
+
+.skill {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff; /* Warna latar belakang kotak keterampilan */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px 0;
+    text-align: center;
+    position: relative; /* Tambahkan ini */
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.skills-container {
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Warna teks yang Anda inginkan */
+}
+
+.skill-progress {
+    height: 15px;
+    background-color: #f1f5f8; /* Warna latar belakang bar kemampuan */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; /* Tambahkan ini */
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background-color: #333; /* Warna bar kemampuan */
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Awal lebar 0 */
+    transition: width 1s ease; /* Animasi kemajuan bar */
+}
+.skill-progress-bar:hover {
+    background-color: #485460; /* Warna bar kemampuan */
+}
+
+/* Animasi kemajuan bar */
+@keyframes progressAnimation {
+    0% {
+        width: 0;
+    }
+}
+
+/* Terapkan animasi pada bar keterampilan saat elemen masuk dalam viewport */
+.skill.in-viewport .skill-progress-bar {
+    animation: progressAnimation 2s ease forwards;
+}
+
+/* Responsif untuk layar dengan lebar maksimum 768px */
+@media screen and (max-width: 768px) {
+    .skill {
+        width: calc(50% - 20px); /* Dua keterampilan per baris */
+    }
+
+    .skill-progress {
+        height: 10px; /* Tinggi bar kemampuan yang lebih kecil */
+    }
+
+    .skill h3 {
+        font-size: 1.2rem; /* Ukuran font yang lebih kecil */
+    }
+}
+
+/* Responsif untuk layar dengan lebar maksimum 480px */
+@media screen and (max-width: 480px) {
+    .skill {
+        width: 100%; /* Satu keterampilan per baris */
+    }
+}

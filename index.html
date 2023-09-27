@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/i.png"type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="style2.css">
+    <title>Indra Saepudin | Portofolio </title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portofolio</div>
+            <div class="menu-toggle" id="menuToggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list" id="navList">
+                <li><a href="#biodata">Biodata</a></li>
+                <li><a href="#tentang-saya" class="scroll-link">Tentang Saya</a></li>
+                <li><a href="#skills">Keterampilan</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside id="biodata">
+            <img src="image/hero3.jpg" alt="Foto Anda">
+            <section>
+                <h2>Biodata Saya</h2>
+                <p>Nama: Indra Saepudin</p>
+                <p>Email: indrasaepudin212@gmail.com</p>
+                <p>Lokasi: Tasikmalaya, JB, Indonesia</p>
+            </section>
+            <nav class="social-links">
+                <p>
+                    <a href="mailto:indrasaepudin212@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/_insa21/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/indrasaepudin21/"><i class="fab fa-linkedin"></i></a>
+                </p>
+            </nav>
+        </aside>
+        <article id="tentang-saya">
+            <h2>Tentang Saya</h2>
+            <p>"Saya adalah Indra Saepudin, seorang web developer yang memadukan desain yang memikat dengan
+                fungsionalitas yang unggul. Dengan pengalaman yang luas dalam berbagai bahasa pemrograman dan teknologi
+                terkini, saya dengan penuh semangat menyambut setiap proyek web sebagai peluang untuk menciptakan solusi
+                yang mengesankan. Latar belakang saya dalam Kecerdasan Buatan (AI) menginspirasi saya untuk
+                mengeksplorasi cara teknologi ini dapat memperkaya pengalaman pengguna di dunia web."</p>
+                <button id="projectButton" class="project-button">Lihat Portofolio Saya</button>
+        </article>
+        <section id="skills" class="skills">
+            <h2>Keterampilan</h2>
+            <ul>
+                <li>
+                    <h3>HTML</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level html">90%</div>
+                    </div>
+                </li>
+                <li>
+                    <h3>CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level css">85%</div>
+                    </div>
+                </li>
+                <li>
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level js">80%</div>
+                    </div>
+                </li>
+                <!-- Tambahkan lebih banyak keterampilan jika diperlukan -->
+            </ul>
+        </section>
+
+        <!-- <div class="svg-container"> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#2e384d" fill-opacity="1"
+                    d="M0,288L0,128L48,128L48,64L96,64L96,32L144,32L144,224L192,224L192,256L240,256L240,128L288,128L288,96L336,96L336,224L384,224L384,128L432,128L432,32L480,32L480,288L528,288L528,288L576,288L576,192L624,192L624,128L672,128L672,160L720,160L720,32L768,32L768,288L816,288L816,96L864,96L864,160L912,160L912,288L960,288L960,256L1008,256L1008,256L1056,256L1056,160L1104,160L1104,160L1152,160L1152,64L1200,64L1200,192L1248,192L1248,256L1296,256L1296,288L1344,288L1344,0L1392,0L1392,128L1440,128L1440,320L1392,320L1392,320L1344,320L1344,320L1296,320L1296,320L1248,320L1248,320L1200,320L1200,320L1152,320L1152,320L1104,320L1104,320L1056,320L1056,320L1008,320L1008,320L960,320L960,320L912,320L912,320L864,320L864,320L816,320L816,320L768,320L768,320L720,320L720,320L672,320L672,320L624,320L624,320L576,320L576,320L528,320L528,320L480,320L480,320L432,320L432,320L384,320L384,320L336,320L336,320L288,320L288,320L240,320L240,320L192,320L192,320L144,320L144,320L96,320L96,320L48,320L48,320L0,320L0,320Z"
+                    stroke="#f44200" /* Tambahkan properti stroke untuk border */
+                    stroke-width="1" /* Lebar border */
+                ></path>
+            </svg>
+            
+        <!-- </div>         -->
+
+
+        <section class="projects hidden" id="portfolio">
+            <h2 class="projects-title">Portofolio</h2>
+            <div class="project-cards">
+                <article class="project-card">
+                    <img src="image/portfolio/1.png" alt="Proyek 1">
+                    <div class="project-info">
+                        <h3>Website Desa Lingkungpasir dibangun menggunakan framework Laravel.</h3>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="image/portfolio/2.png" alt="Proyek 2">
+                    <div class="project-info">
+                        <h3>Aplikasi Baca Tulis Al-Qur'an berbasis website dengan penggunaan teknologi Artificial Intelligence.</h3>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="image/portfolio/3.png" alt="Proyek 2">
+                    <div class="project-info">
+                        <h3>Aplikasi Psikologi Berbasis Website dengan Penerapan Teknologi Artificial Intelligence.</h3>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="image/portfolio/6.png" alt="Proyek 2">
+                    <div class="project-info">
+                        <h3>Website Portofolio yang Didesain dengan Menggunakan Bootstrap.</h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 - Indra Saepudin. All Rights Reserved.<br /></p>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
